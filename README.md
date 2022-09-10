@@ -1,5 +1,5 @@
 # SaaSGlue Kubernetes Job Runner
-Includes code and artifacts required to run two sample applications as scheduled jobs in Kubernetes with SaaSGlue.
+SaaSGlue is a powerful and versatile Scheduling and Automation service that can be used among other things to schedule jobs in Kubernetes. This repo includes code and artifacts required to run two sample applications as scheduled jobs in Kubernetes with SaaSGlue.
 <br />
 
 ## Prerequisites
