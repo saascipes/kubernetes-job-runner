@@ -34,11 +34,12 @@ Includes code and artifacts required to run two sample applications as scheduled
 - Click the job name "Kubernetes Job Runner" to view the job details.
 - Click the "Schedules" tab.
 - Click the "Is Active" checkbox to activate/inactivate the two schedules.
+- The two schedules are configured to run the sample applications once per minute. See the [Documentation](#https://saasglue.com/docs#job-schedule) for other scheduling options.
 
 ## Install the SaaSGlue Agent
 1. If you don't already have a SaaSGlue account, sign up for a free account at https://console.saasglue.com.
 
-2. Get SaaSGlue Agent credentials (access id and secret).
+2. Get SaaSGlue Agent credentials (access key id and secret).
 - Log in to the SaasGlue web [console](https://console.saasglue.com).
 - Click your login name in the upper right hand corner and click "Access Keys".
 - Click the "Agent Access Keys" tab.
