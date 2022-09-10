@@ -10,17 +10,17 @@ SaaSGlue is a powerful and versatile Scheduling and Automation service that can 
 ## Install
 1. Clone this git repo.
   ```
-  $ git clone https://github.com/saascipes/kubernetes-job-runner.git
+  git clone https://github.com/saascipes/kubernetes-job-runner.git
   ```
 2. Build the Docker images.
   - The Kubernetes Job Runner image. This image runs the SaaSGlue Agent which will start the sample application jobs.
   ```
-  $ ./bin/build_agent_docker_image.sh
+  ./bin/build_agent_docker_image.sh
   ```
   - The Sample Application images.
   ```
-  $ ./bin/build_sample_app_1_docker_image.sh
-  $ ./bin/build_sample_app_2_docker_image.sh
+  ./bin/build_sample_app_1_docker_image.sh
+  ./bin/build_sample_app_2_docker_image.sh
   ```
 3. [Install the SaaSGlue Agent](#install-the-saasglue-agent) in Kubernetes.
 4. Import the "Kubernetes Job Runner" job to SaaSGlue.
@@ -51,7 +51,7 @@ SaaSGlue is a powerful and versatile Scheduling and Automation service that can 
 - Copy the access key id from the grid.
 3. Add the SaaSGlue Helm repo.
   ```
-  $ helm repo add saasglue https://saasglue.github.io/helm-charts/
+  helm repo add saasglue https://saasglue.github.io/helm-charts/
   ```
 4. Install the SaaSGlue Agent chart.
   ```
