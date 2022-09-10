@@ -13,7 +13,7 @@ Includes code and artifacts required to run two sample applications as scheduled
   $ git clone https://github.com/saascipes/kubernetes-job-runner.git
   ```
 2. Build the Docker images.
-  - The Kubernetes Job Runner image. This images runs the SaaSGlue Agent which will start the sample application jobs.
+  - The Kubernetes Job Runner image. This image runs the SaaSGlue Agent which will start the sample application jobs.
   ```
   $ ./bin/build_agent_docker_image.sh
   ```
@@ -38,7 +38,7 @@ Includes code and artifacts required to run two sample applications as scheduled
 ## Install the SaaSGlue Agent
 1. If you don't already have a SaaSGlue account, sign up for a free account at https://console.saasglue.com.
 
-2. Get SaaSGlue Agent credentials.
+2. Get SaaSGlue Agent credentials (access id and secret).
 - Log in to the SaasGlue web [console](https://console.saasglue.com).
 - Click your login name in the upper right hand corner and click "Access Keys".
 - Click the "Agent Access Keys" tab.
@@ -56,4 +56,4 @@ Includes code and artifacts required to run two sample applications as scheduled
   ```
   helm install sg-kubernetes-job-runner --set accessKeyId=[access key id] --set accessKeySecret=[access key secret] --set tags=role=kubernetes_job_runner ./deploy/kubernetes/helm/agent
   ```
-5. You should now see the sg-kubernetes-job-runner agent.
+5. You should now see the sg-kubernetes-job-runner agent in the SaaSGlue web console Dashboard or in the Agents tab.
