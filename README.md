@@ -12,8 +12,8 @@ SaaSGlue is a powerful and versatile Scheduling and Automation service that can 
   ```
   git clone https://github.com/saascipes/kubernetes-job-runner.git
   ```
-2. Open a Terminal window and change directories to the kubernetes-job-runner repo folder.
-2. Build the Docker images.
+2. Change directories to the kubernetes-job-runner repo folder.
+3. Build the Docker images.
   - The Kubernetes Job Runner image. This image runs the SaaSGlue Agent which will start the sample application jobs.
   ```
   ./bin/build_agent_docker_image.sh
@@ -23,8 +23,8 @@ SaaSGlue is a powerful and versatile Scheduling and Automation service that can 
   ./bin/build_sample_app_1_docker_image.sh
   ./bin/build_sample_app_2_docker_image.sh
   ```
-3. [Install the SaaSGlue Agent](#install-the-saasglue-agent) in Kubernetes.
-4. Import the "Kubernetes Job Runner" job to SaaSGlue.
+4. [Install the SaaSGlue Agent](#install-the-saasglue-agent) in Kubernetes.
+5. Import the "Kubernetes Job Runner" job to SaaSGlue.
 - Log in to the SaaSGlue web [console](https://console.saasglue.com).
 - Click "Designer" in the menu bar.
 - Click "Import Jobs".
