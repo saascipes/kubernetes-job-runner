@@ -1,5 +1,5 @@
 # SaaSGlue Kubernetes Job Runner
-SaaSGlue is a powerful and versatile Scheduling and Automation service that can be used among other things to schedule jobs in Kubernetes. This repo includes code and artifacts required to run two sample applications as scheduled jobs in Kubernetes with SaaSGlue.
+SaaSGlue is a powerful and versatile Scheduling and Automation service that can be used among other things to schedule and run jobs in Kubernetes. This repo includes code and artifacts to schedule and run two sample applications as Kubernetes jobs using SaaSGlue.
 <br />
 
 ## Prerequisites
@@ -12,21 +12,20 @@ SaaSGlue is a powerful and versatile Scheduling and Automation service that can 
   ```
   git clone https://github.com/saascipes/kubernetes-job-runner.git
   ```
-2. Change directories to the kubernetes-job-runner repo folder.
-3. Build the Docker images.
-  - The Kubernetes Job Runner image. This image runs the SaaSGlue Agent which will start the sample application jobs.
+2. Change directories to the kubernetes-job-runner folder.
+3. Build the Kubernetes Job Runner Docker image. This image hosts the SaaSGlue Agent which will start the Kubernetes jobs for the two sample applications.
   ```
   ./bin/build_agent_docker_image.sh
   ```
-  - The Sample Application images.
+4. Build the Sample Application Docker images.
   ```
   ./bin/build_sample_app_1_docker_image.sh
   ```
   ```
   ./bin/build_sample_app_2_docker_image.sh
   ```
-4. [Install the SaaSGlue Agent](#install-the-saasglue-agent) in Kubernetes.
-5. Import the "Kubernetes Job Runner" job to SaaSGlue.
+5. [Install the SaaSGlue Agent](#install-the-saasglue-agent) in Kubernetes.
+6. Import the "Kubernetes Job Runner" job to SaaSGlue and enable the schedules to run the Sample Applications.
 - Log in to the SaaSGlue web [console](https://console.saasglue.com).
 - Click "Designer" in the menu bar.
 - Click "Import Jobs".
@@ -38,6 +37,23 @@ SaaSGlue is a powerful and versatile Scheduling and Automation service that can 
 - Click the "Schedules" tab.
 - Click the "Is Active" checkbox to activate/inactivate the two schedules.
 - The two schedules are configured to run the sample applications once per minute. See the [Documentation](#https://saasglue.com/docs#job-schedule) for other scheduling options.
+7. Monitor the running jobs.
+- Click the "Monitor" tab in the SaaSGlue console.
+- To view job results click the "Monitor [job instance number]" link next to the job name.
+- View stdout for running Kubernetes job. The sample applications write messages to stdout and sleep for 60 seconds.
+  - To view the running jobs:
+    ```
+    kubectl get job | grep "sample-app"
+    ```
+  - To view the stdout while the jobs are running: 
+    ```
+    ./bin/view_sample_app_1_logs.sh
+    ```
+    for sample app 1 or:
+    ```
+    ./bin/view_sample_app_2_logs.sh
+    ```
+    for sample app 2.
 
 ## Install the SaaSGlue Agent
 1. If you don't already have a SaaSGlue account, sign up for a free account at https://console.saasglue.com.
