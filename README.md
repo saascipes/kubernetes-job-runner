@@ -60,4 +60,4 @@ SaaSGlue is a powerful and versatile Scheduling and Automation service that can 
   ```
   helm install sg-kubernetes-job-runner --set accessKeyId=[access key id] --set accessKeySecret=[access key secret] --set tags=role=kubernetes_job_runner ./deploy/kubernetes/helm/agent
   ```
-5. You should now see an Agent named "sg-kubernetes-job-runner-agent" in the SaaSGlue web console Dashboard and in the Agents tab.
+5. You should now see an Agent named "sg-kubernetes-job-runner-agent" in the SaaSGlue console Dashboard and Agents tab.
