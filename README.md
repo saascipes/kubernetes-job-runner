@@ -40,11 +40,11 @@ SaaSGlue is a powerful and versatile Scheduling and Automation service that can 
 7. Monitor the running jobs.
 - Click the "Monitor" tab in the SaaSGlue console. To view job results click the "Monitor [job instance number]" link next to the job name.
 - View stdout for running Kubernetes job. The sample applications write messages to stdout and sleep for 60 seconds.
-  - To view the running jobs:
+  - To view running jobs:
     ```
     kubectl get job | grep "sample-app"
     ```
-  - To view the stdout while the jobs are running: 
+  - To view stdout while the jobs are running: 
     ```
     ./bin/view_sample_app_1_logs.sh
     ```
