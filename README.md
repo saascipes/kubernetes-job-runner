@@ -56,7 +56,7 @@ SaaSGlue is a powerful and versatile Scheduling and Automation service that can 
   ```
   helm repo add saasglue https://saasglue.github.io/helm-charts/
   ```
-4. Install the SaaSGlue Agent chart.
+4. Install the SaaSGlue Agent chart substituting the agent access key id and secret obtained in step 2 for the placeholders in the following command.
   ```
   helm install sg-kubernetes-job-runner --set accessKeyId=[access key id] --set accessKeySecret=[access key secret] --set tags=role=kubernetes_job_runner ./deploy/kubernetes/helm/agent
   ```
