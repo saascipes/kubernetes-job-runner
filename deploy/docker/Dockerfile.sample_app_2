@@ -1,0 +1,22 @@
+FROM python:3.9.4-slim-buster as sample_app_2
+
+RUN python -m venv /opt/venv
+ENV PATH="/opt/venv/bin:$PATH"
+
+COPY src /home/appuser/app/src
+
+ARG DIR=/home/appuser
+WORKDIR /home/appuser/app
+
+RUN groupadd -g 999 appuser && \
+  useradd -r -m -u 999 -g appuser -s /usr/sbin/nologin appuser
+
+# Set restrictive permissions
+RUN chmod -R 600 $DIR && \
+  find $DIR -type d -exec chmod 700 '{}' \;
+
+# Set ownership
+RUN chown -R appuser:appuser $DIR
+
+# 1. Start application as unprivileged user
+CMD runuser -u appuser -- "python" "src/sample_app_2.py"

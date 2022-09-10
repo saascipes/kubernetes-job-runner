@@ -1,0 +1,4 @@
+# Ignore any generated TypeScript -> JavaScript files
+.github/actions/**/*.js
+
+.vscode
