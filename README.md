@@ -56,4 +56,4 @@ Includes code and artifacts required to run two sample applications as scheduled
   ```
   helm install sg-kubernetes-job-runner --set accessKeyId=[access key id] --set accessKeySecret=[access key secret] --set tags=role=kubernetes_job_runner ./deploy/kubernetes/helm/agent
   ```
-5. You should now see the sg-kubernetes-job-runner agent in the SaaSGlue web console Dashboard or in the Agents tab.
+5. You should now see an Agent named "sg-kubernetes-job-runner-agent" in the SaaSGlue web console Dashboard and in the Agents tab.
