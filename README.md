@@ -21,6 +21,8 @@ SaaSGlue is a powerful and versatile Scheduling and Automation service that can 
   - The Sample Application images.
   ```
   ./bin/build_sample_app_1_docker_image.sh
+  ```
+  ```
   ./bin/build_sample_app_2_docker_image.sh
   ```
 4. [Install the SaaSGlue Agent](#install-the-saasglue-agent) in Kubernetes.
