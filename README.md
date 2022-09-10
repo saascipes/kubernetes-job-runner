@@ -38,8 +38,7 @@ SaaSGlue is a powerful and versatile Scheduling and Automation service that can 
 - Click the "Is Active" checkbox to activate/inactivate the two schedules.
 - The two schedules are configured to run the sample applications once per minute. See the [Documentation](https://saasglue.com/docs#job-schedule) for other scheduling options.
 7. Monitor the running jobs.
-- Click the "Monitor" tab in the SaaSGlue console.
-- To view job results click the "Monitor [job instance number]" link next to the job name.
+- Click the "Monitor" tab in the SaaSGlue console. To view job results click the "Monitor [job instance number]" link next to the job name.
 - View stdout for running Kubernetes job. The sample applications write messages to stdout and sleep for 60 seconds.
   - To view the running jobs:
     ```
