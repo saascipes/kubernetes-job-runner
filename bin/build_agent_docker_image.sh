@@ -4,7 +4,7 @@ set -e
 
 export DOCKER_BUILDKIT=1
 
-VERSION=$1
+VERSION=v0.0.1
 APP_NAME=kubernetes_job_runner
 
 docker buildx build -t $APP_NAME:$VERSION --target $APP_NAME --load -f deploy/docker/Dockerfile.agent .
