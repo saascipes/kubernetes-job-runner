@@ -33,7 +33,7 @@ SaaSGlue is a powerful and versatile Scheduling and Automation service that can 
 - Click "Choose File".
 - Select the "kubernetes_job_runner.sgj" file in the kubernetes-job-runner root folder and click "Open".
 - Click "Import Jobs".
-- You should see the message "Successfully imported the jobs file to your team!" .followed by detailed results. Click "Close".
+- You should see the message "Successfully imported the jobs file to your team!" followed by detailed results. Click "Close".
 - Click the job name "Kubernetes Job Runner" to view the job details.
 - Click the "Schedules" tab.
 - Click the "Is Active" checkbox to activate/inactivate the two schedules.
