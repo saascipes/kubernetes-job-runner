@@ -34,12 +34,17 @@ SaaSGlue is a powerful and versatile Scheduling and Automation service that can 
 - Click "Import Jobs".
 - You should see the message "Successfully imported the jobs file to your team!" followed by detailed results. Click "Close".
 - Click the job name "Kubernetes Job Runner" to view the job details.
+
+## Usage
+There are two schedules defined in the "Kubernetes Job Runner" job - one for each sample application. The schedules are deactivated by default. To activate the schedules and monitor the running jobs:
+- Log in to the SaaSGlue web console.
+- Click "Designer" in the menu bar.
+- Click "Kubernetes Job Runner".
 - Click the "Schedules" tab.
 - Click the "Is Active" checkbox to activate/inactivate the two schedules.
 - The two schedules are configured to run the sample applications once per minute. See the [Documentation](https://saasglue.com/docs#job-schedule) for other scheduling options.
-7. Monitor the running jobs.
-- Click the "Monitor" tab in the SaaSGlue console. To view job results click the "Monitor [job instance number]" link next to the job name.
-- View stdout for running Kubernetes job. The sample applications write messages to stdout and sleep for 60 seconds.
+- Click the "Monitor" tab in the SaaSGlue console. When jobs start you will see them in the Monitor. To view job results click the "Monitor [job instance number]" link next to the job name. This will show log messages related to starting the Kubernetes job.
+- The sample applications write messages to stdout and sleep for 60 seconds before shutting down.
   - To view running jobs:
     ```
     kubectl get job | grep "sample-app"
