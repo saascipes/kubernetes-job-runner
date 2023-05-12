@@ -6,6 +6,6 @@ metadata:
   name: saasglue-agent
 rules:
   - apiGroups: ["apps", "batch", ""]
-    resources: ["jobs", "pods"]
-    verbs: ["create", "list"]
+    resources: ["jobs", "pods", "pods/log"]
+    verbs: ["create", "list", "watch", "get"]
 {{- end }}
